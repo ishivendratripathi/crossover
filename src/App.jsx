@@ -15,10 +15,10 @@ function App() {
         <Fronttext />
         <a href="https://calendly.com/"><Button /></a>
         <Online />
-        <div className='text-2xl font-bold relative left-24 top-40'>
+        <div className='text-2xl font-bold relative left-24 top-40 md:left-96 md:ml-60'>
           Scroll For more
         </div>
-        <div className='text-4xl relative top-44 left-40 animate-bounce'>
+        <div className='text-4xl relative top-48 left-40 animate-bounce md:left-96 md:ml-80'>
           ☟
         </div>
         <Scroll />

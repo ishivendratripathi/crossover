@@ -18,11 +18,10 @@ document.body.style.backgroundColor=dark
 <br />
     <button onClick={()=>{
         setdark(dark==="black"?"white":"black")
-    }} className={`sm:border-2 border-black rounded-lg absolute left-32 text-white ${dark==="black" ? "text-white":"text-black"}`}>{dark==="black" ? "Toggle to white" : <div className='text-black'>Back to black✨</div> }</button>
-    <div className='sm: text-white relative top-8 left-10 mt-6 font-thin text-xl'>We create products that serves <br /> both users <br />and businesses and drive real 
-    <br />results.</div>
+    }} className={`sm:border-2 border-black rounded-lg absolute left-32 text-white ${dark==="black" ? "text-white":"text-black"}`}></button>
+    <div className='ml-10 text-white relative top-8 mt-6 font-thin text-xl md:ml-96 md:pl-48'><span className='text-6xl font-semibold text-red-500'>We</span> create products that serves both <br /> <span className='text-6xl font-semibold text-pink-500'>Users so</span><br /><span className='text-6xl font-semibold text-purple-500'>businesses</span> can drive real 
+    results.</div>
     </>
   )
 }
-
 export default Fronttext

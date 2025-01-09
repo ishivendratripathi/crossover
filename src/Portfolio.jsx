@@ -8,7 +8,7 @@ const FallingAnimation = () => {
       {elements.map((_, index) => (
         <div
           key={index}
-          className="w-2 h-2 rounded-full absolute animate-fall"
+          className="w-4 h-4 rounded-full absolute animate-fall"
           style={{
             backgroundColor: `hsl(${Math.random() * 360}, 70%, 60%)`,
             left: `${Math.random() * 100}vw`,
