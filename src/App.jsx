@@ -1,29 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Fronttext from './Fronttext'
-import Button from './Button'
-import Online from './Online'
-import Scroll from './Scroll'
-
+import React from 'react';
+import Fronttext from './Fronttext';
+import Button from './Button';
+import Online from './Online';
+import Scroll from './Scroll';
+import Portfolio from './Portfolio';
 
 function App() {
-  
-
   return (
-    <>
-    <Fronttext />
-    <Button />
-    <br />
-    <Online/>
-    <div className='text-white relative top-40 left-60 ml-4'>Scroll for more</div>
-   <div className='text-white animate-bounce relative top-44 left-60 ml-14'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-</svg></div>
-<Scroll />
-    </>
-  )
+    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Portfolio />
+      </div>
+      <div className="relative z-10 items-center justify-center min-h-screen">
+        <Fronttext />
+        <a href="https://calendly.com/"><Button /></a>
+        <Online />
+        <div className='text-2xl font-bold relative left-24 top-40'>
+          Scroll For more
+        </div>
+        <div className='text-4xl relative top-44 left-40 animate-bounce'>
+          ☟
+        </div>
+        <Scroll />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

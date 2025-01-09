@@ -6,14 +6,16 @@ export default {
   ],
   theme: {
     extend: {
-      translate: {
-        'z-10': '10px',
-        'z-20': '20px',
-        'z-1/2': '50%',
-        'z-full': '100%',
-      }
+      animation: {
+        fall: 'fall 10s linear infinite',
+      },
+      keyframes: {
+        fall: {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
+      },
     },
   },
   plugins: [],
 }
-

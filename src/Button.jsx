@@ -8,7 +8,7 @@ const Button = () => {
       <button
         onMouseEnter={() => setText(false)}
         onMouseLeave={() => setText(true)}
-        className="text-white relative top-20 left-52 border rounded-2xl p-2 transition-transform duration-300 ease-in-out hover:bg-sky-400 hover:scale-125"
+        className="text-white relative top-20 left-20 border rounded-2xl p-2 transition-transform duration-300 ease-in-out hover:bg-sky-400 hover:scale-125"
       >
         {text ? (
           <div className='flex gap-2'>
