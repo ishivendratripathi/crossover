@@ -4,6 +4,7 @@ import Button from './Button';
 import Online from './Online';
 import Scroll from './Scroll';
 import Portfolio from './Portfolio';
+import Expand from './Expand';
 
 function App() {
   return (
@@ -15,13 +16,22 @@ function App() {
         <Fronttext />
         <a href="https://calendly.com/"><Button /></a>
         <Online />
-        <div className='text-2xl font-bold relative left-24 top-40 md:left-96 md:ml-60'>
-          Scroll For more
-        </div>
-        <div className='text-4xl relative top-48 left-40 animate-bounce md:left-96 md:ml-80'>
-          ☟
-        </div>
+        <div className="relative top-20 left-24 sm:static sm:flex sm:justify-center sm:items-center">
+  <div className="text-2xl font-bold">
+    Scroll For more
+  </div>
+</div>
+
+<div className="relative top-24 left-40 animate-bounce sm:static sm:flex sm:justify-center sm:items-center mt-4">
+  <div className="text-4xl">
+    ☟
+  </div>
+</div>
         <Scroll />
+        <div className='flex justify-center items-center'>
+          <span className='text-9xl mt-20 font-extrabold text-white'>PROJECTS</span>
+        </div>
+        <Expand />
       </div>
     </div>
   );

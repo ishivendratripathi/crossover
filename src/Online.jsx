@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react';
 
 export default function Online() {
-
-    return (
+  return (
     <>
-    <div className='flex'>
-      <div className='rounded-full size-3 animate-bounce left-32 bg-green-500 relative top-44 md:left-96 md:ml-72'></div>
-      <div className='text-white relative top-40 left-32 mt-2 ml-2 md:left-96 '>Let's build</div>
+      <div className="relative sm:static sm:flex sm:justify-center sm:items-center sm:top-40 left-32 flex gap-2">
+        <div className="w-3 h-3 rounded-full animate-bounce bg-green-500"></div>
+        <div className="text-white text-sm sm:text-base md:text-lg lg:text-xl">
+          Let's build
+        </div>
       </div>
-      </>
-  )
+    </>
+  );
 }
