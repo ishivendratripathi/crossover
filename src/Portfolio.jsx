@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FallingAnimation = () => {
-  const elements = Array.from({ length: 700 });
+  const elements = Array.from({ length: 1000 });
 
   return (
     <div className="absolute inset-0 overflow-hidden z-0">

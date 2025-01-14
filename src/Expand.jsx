@@ -1,40 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-const Expand = (names) => {
+const Expand = () => {
+  const [scale, setScale] = useState(1); 
 
-  const [scale,setscale]=useState(0)
+  useEffect(() => {
+    let debounceTimeout;
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newScale = Math.min(2, 1 + scrollY / 1000); 
+      setScale(newScale);
+    };
 
-  const handler =()=>{
-    const handlingscroll=window.scrollY
+    const debouncedHandler = () => {
+      clearTimeout(debounceTimeout);
+      debounceTimeout = setTimeout(handleScroll, 50); 
+    };
 
-const lastscroll= 2+handlingscroll/1000;    
-    setscale(lastscroll)
-    console.log(setscale)
-  }
+    window.addEventListener('scroll', debouncedHandler);
 
-  useEffect(()=>{
-    window.addEventListener("scroll",handler)
+    return () => {
+      clearTimeout(debounceTimeout);
+      window.removeEventListener('scroll', debouncedHandler);
+    };
+  }, []);
 
-    return()=>{
-        window.removeEventListener("scroll",handler)
-    }
-  })
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen gap-20 mt-20">
+      <img
+        className="w-1/4 rounded-xl transform duration-300 ease-in-out shadow-2xl max-w-full max-h-[80vh]"
+        src="https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Image 1"
+        style={{ transform: `scale(${scale})` }}
+      />
+    </div>
+  );
+};
 
-    return (
-        <>
-        <div className="flex flex-col items-center justify-center min-h-screen gap-20 mt-20">
-          <img 
-            className="w-1/4 rounded-xl transform:duration-300 ease-in-out shadow-2xl " 
-            src="https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="Image 1" 
-            style={{ transform: `scale(${scale})`,maxWidth:"100vw",maxHeight:"100vh", }} 
-          />
-        </div>
-        
-        </>      
-      
-     )
-}
-
-export default Expand
-
+export default Expand;

@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react'
 const Fronttext = () => {
 
 const [dark,setdark]=useState("black")
-
-
-
 useEffect(()=>{
 document.body.style.backgroundColor=dark
 },[dark])
